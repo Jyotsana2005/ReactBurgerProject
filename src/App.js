@@ -1,19 +1,52 @@
 import React, { Component } from 'react';
-
+import { Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Navbar from './Components/Navbar/Navbar';
+import ProductList from './Components/ProductList/ProductList';
+import Cart from './Components/Cart/Cart';
+import Details from './Components/Details/Details';
+import Default from './Components/Default/Default';
+import Modal from './Components/modal'
 
 // import React, { useState } from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import Person from './Components/Persons/Person/person'
-import UserOutput from './Components/UserOutput/UserOutput';
-import UserInput from './Components/UserInput/UserInput';
-import ValidationComponent from './Components/ValidationComponents/ValidationComponents'
-import Char from './Components/Char/Char'
-import Layout from './Components/Layout/Layout';
-import BurgerBuilder from './Container/BurgerBuilder/BurgerBuilder'
-import person from './Components/Persons/Person/person';
+// import './App.css';
+// import Person from './Components/Persons/Person/person'
+// import UserOutput from './Components/UserOutput/UserOutput';
+// import UserInput from './Components/UserInput/UserInput';
+// import ValidationComponent from './Components/ValidationComponents/ValidationComponents'
+// import Char from './Components/Char/Char'
+// import Layout from './Components/Layout/Layout';
+// import BurgerBuilder from './Container/BurgerBuilder/BurgerBuilder'
+// import person from './Components/Persons/Person/person';
+
+
+// project
+
+class App extends Component {
+  render() {
+    return (
+      //   <React.Fragment> work as a parent component
+
+      <React.Fragment>
+        <Navbar />
+        <Switch>
+          <Route path='/details' component={Details} />
+          <Route path='/cart' component={Cart} />
+          <Route exact path='/' component={ProductList} />
+          <Route component={Default} />
+        </Switch>
+        <Modal/>
+      </React.Fragment>
+    );
+  }
+}
+export default App;
+
+
 
 //Burger App
 // class App extends Component {
@@ -455,27 +488,27 @@ import person from './Components/Persons/Person/person';
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit react <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit react <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
