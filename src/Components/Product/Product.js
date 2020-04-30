@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { ProductConsumer } from '../../context'
+// import img from '../../../public/img'
 import PropTypes from 'prop-types'
 
 export class Product extends Component {

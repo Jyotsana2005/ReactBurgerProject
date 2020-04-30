@@ -39,7 +39,7 @@ class App extends Component {
           <Route exact path='/' component={ProductList} />
           <Route component={Default} />
         </Switch>
-        <Modal/>
+        <Modal />
       </React.Fragment>
     );
   }
